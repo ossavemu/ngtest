@@ -9,7 +9,8 @@ export class InputComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-  inputST = '';
+  inputST: string = '';
+  result: any = '';
   dotchecker() {
     if (this.inputST.includes(',')) {
       this.inputST = this.inputST.replace(/[,]/gi, '.');
@@ -18,14 +19,14 @@ export class InputComponent implements OnInit {
   }
   calculate() {
     this.dotchecker();
-    let result = math.evaluate(this.inputST);
-    console.log(result);
-    return result;
+    this.result = math.evaluate(this.inputST);
+    console.log(this.result);
+    return this.result;
   }
   simp() {
     console.log(this.inputST);
     this.dotchecker();
-    let result = math.simplify(this.inputST);
-    console.log(result);
+    this.result = math.simplify(this.inputST);
+    console.log(this.result);
   }
 }
