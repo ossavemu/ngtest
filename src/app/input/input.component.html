@@ -1,0 +1,19 @@
+<div class="input-group  mx-auto" id="mainChanel">
+  <input [(ngModel)]="inputST" type="text" class="form-control" aria-label="Text input with segmented dropdown button"
+    id="inputST" placeholder="Example: cos(20) * -1" />
+  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+    <button (click)="calculate()" type="button" id="bta" class="btn btn-secondary">Calculate</button>
+    <div class="btn-group" role="group">
+      <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false"></button>
+      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDrop1">
+        <a class="dropdown-item" id="scope" href="#">Evaluate</a>
+        <a class="dropdown-item" (click)="simp()" id="simp" href="#">Simplify</a>
+        <a class="dropdown-item" id="dx" href="#">Derivative</a>
+        <a class="dropdown-item" id="rat" href="#">Rationalize</a>
+        <hr class="dropdown-divider" />
+        <a class="dropdown-item" id="clear" href="#">Clear</a>
+      </div>
+    </div>
+  </div>
+</div>
